@@ -92,6 +92,7 @@ while True:
     
     # Update the displays with a zero-padded string
     text_count = f"{len(counts):0>3}"
+    print(text_count) 
     my_tube.set_digit(int(text_count[0]))
     my_tube_m.set_digit(int(text_count[1]))
     my_tube_r.set_digit(int(text_count[2]))
