@@ -14,6 +14,7 @@ usvh_ratio = 0.00812037037037 # This is for the J305 tube
 
 # This method fires on edge detection (the pulse from the counter board)
 def countme(channel):
+    print("detected")
     global counts, hundredcount
     timestamp = datetime.datetime.now()
     counts.append(timestamp)
@@ -92,7 +93,7 @@ while True:
     
     # Update the displays with a zero-padded string
     text_count = f"{len(counts):0>3}"
-    print(text_count) 
+     
     my_tube.set_digit(int(text_count[0]))
     my_tube_m.set_digit(int(text_count[1]))
     my_tube_r.set_digit(int(text_count[2]))
